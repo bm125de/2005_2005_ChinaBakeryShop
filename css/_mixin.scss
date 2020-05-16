@@ -1,3 +1,4 @@
+// 規則函數
 @mixin media_pc {
     @media screen and (min-width: 1400px) {
         @content;
@@ -16,6 +17,27 @@
     }
 }
 
+@mixin hw_100 {
+    height: 100%;
+    width: 100%;
+}
+
+@mixin flex_c {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+@mixin pos_a_c {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+// 非規則函數
 @mixin pro_items_list {
     &:nth-child(1) {
         .title {

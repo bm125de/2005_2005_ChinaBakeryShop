@@ -187,7 +187,7 @@ body {
 
 .dev {
   width: 100%;
-  height: 85vh;
+  height: 90vh;
   min-height: 720px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -238,6 +238,34 @@ body {
 
 .dev .intor p {
   font-size: 30px;
+}
+
+.dev .intor .btn {
+  margin: 60px 0;
+}
+
+.dev .intor .btn a {
+  display: inline-block;
+  color: white;
+  -webkit-text-decoration: transparent;
+          text-decoration: transparent;
+  padding: 8px 20px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.dev .intor .btn a:first-child {
+  border: transparent solid 2px;
+  background-color: white;
+  color: black;
+}
+
+.dev .intor .btn a:first-child:hover {
+  background-color: transparent;
+  color: white;
+  border: white solid 2px;
 }
 
 .index {
@@ -298,8 +326,8 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100%;
   height: 100%;
+  width: 100%;
   margin-top: 40px;
 }
 
@@ -496,7 +524,6 @@ body {
 }
 
 .index .block.b-2:hover .bg {
-  background-color: #221e17ef;
   height: 100%;
   width: 100%;
 }
@@ -1383,5 +1410,55 @@ body {
 
 .product .p-1 .main .items .item:nth-child(9) .bg {
   background-image: url("../images/item_0008_起司包.jpg");
+}
+
+.product .cart {
+  -webkit-transition: .3s .2s;
+  transition: .3s .2s;
+  height: 100%;
+  width: 100%;
+  z-index: 1000000;
+  top: 0;
+  right: 0;
+  position: fixed;
+}
+
+.product .cart .main {
+  -webkit-transition: .2s;
+  transition: .2s;
+  width: 80%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  background-color: #fff;
+}
+
+.product .cart .bg {
+  -webkit-transition: 1s .4s;
+  transition: 1s .4s;
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+.product .cart.close {
+  right: -100vw;
+  opacity: .0;
+  -webkit-transition: 2s;
+  transition: 2s;
+  background-color: transparent;
+}
+
+.product .cart.close .main {
+  right: -100%;
+}
+
+.product .cart.close .bg {
+  -webkit-transition: .2s;
+  transition: .2s;
+  background-color: rgba(0, 0, 0, 0);
 }
 /*# sourceMappingURL=main.css.map */

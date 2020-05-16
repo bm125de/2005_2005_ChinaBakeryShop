@@ -39,8 +39,7 @@
                 // background-color: red;
                 display: flex;
                 justify-content: center;
-                width: 100%;
-                height: 100%;
+                @include hw_100;
                 margin-top: 40px;
                 @include media_mobile {
                     flex-flow: column;

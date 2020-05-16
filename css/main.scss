@@ -279,4 +279,43 @@ body {
             }
         }
     }
+    .cart {
+        transition: .3s .2s;
+        @include hw_100;
+        z-index: 1000000;
+        top: 0;
+        // left: 0;
+        right: 0;
+        position: fixed;
+        .main {
+            transition: .2s;
+            width: 80%;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            background-color: #fff;
+        }
+        .bg {
+            transition: 1s .4s;
+            // background-color: blue;\
+            background-color: rgba(0, 0, 0, 0.7);
+            @include hw_100;
+            position: absolute;
+            backdrop-filter: blur(10px);
+        }
+        &.close {
+            right: -100vw;
+            // width: 0;
+            opacity: .0;
+            transition: 2s;
+            background-color: transparent;
+            .main {
+                right: -100%;
+            }
+            .bg {
+                transition: .2s;
+                background-color: rgba(0, 0, 0, 0.0);
+            }
+        }
+    }
 }
