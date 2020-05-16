@@ -1,6 +1,7 @@
 // 初始化
 var b3_into = 1;
 var p1_chioce = 1;
+var cart_open = false;
 // $(".ar-2").hide();
 // $(".ar-3").hide();
 
@@ -106,6 +107,30 @@ function p1_tag(chioce) {
     }
 }
 
+// function cart_open_close(cart) {
+//     if (cart = true) {
+
+//         console.log(cart);
+//     } else {
+//         console.log(cart);
+//         $(".product").find(".cart").addClass('close');
+//     }
+// }
+$(".product .p-1 .btn").click(function() {
+    cart_open = true;
+    $(".product").find(".cart").removeClass('close');
+});
+$(".cart .bg").click(function() {
+    cart_open = false;
+    $(".product").find(".cart").addClass('close');
+});
+
 // function p3(e) {
 
-// }
+// $(window).scroll(function() {
+//     if ($(window).scrollTop() > 50) {
+//         $(".nav").find(".nav").addClass("top");
+//     } else {
+//         $(".nav").find(".top").removeClass("top");
+//     }
+// });
