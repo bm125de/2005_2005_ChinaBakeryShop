@@ -134,3 +134,23 @@ $(".cart .bg").click(function() {
 //         $(".nav").find(".top").removeClass("top");
 //     }
 // });
+$('.runload').focus(function() {
+    $('load').find(".none").removeClass('none');
+})
+setTimeout(function() {
+
+
+    $('.load').addClass('none');
+
+
+
+}, 1000);
+
+$(".open").click(function() {
+    console.log(3745681);
+    $(".nav").find(".m-none").removeClass('m-none');
+});
+$(".m-close").click(function() {
+    console.log(3745681);
+    $(".nav").find(".menu").addClass('m-none');
+});
