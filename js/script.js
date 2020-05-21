@@ -124,6 +124,27 @@ $(".cart .bg").click(function() {
     cart_open = false;
     $(".product").find(".cart").addClass('close');
 });
+$(".cart .icon").click(function() {
+    cart_open = false;
+    $(".product").find(".cart").addClass('close');
+});
+$(".cart-icon").click(function() {
+    cart_open = true;
+    $(".product").find(".cart").removeClass('close');
+});
+
+$(".support .item.dr-close").click(function() {
+    console.log(this);
+    $(this).removeClass('dr-close');
+    $(this).addClass('dr-open');
+
+});
+$(".support .dr-open").click(function() {
+    console.log(this);
+    $(this).addClass('dr-close');
+    $(this).removeClass('dr-open');
+
+});
 
 // function p3(e) {
 

@@ -12,7 +12,7 @@
   position: sticky;
   top: 0;
   background-color: #221e17;
-  border-bottom: #96916657 solid 1px;
+  border-bottom: #fffaee4d solid 1px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -301,12 +301,679 @@
   height: 0;
 }
 
+.product {
+  width: 100%;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.product .p-1 {
+  background-color: #fffaee4d;
+  width: 100%;
+  min-height: 50vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 5vw;
+}
+
+.product .p-1 .main {
+  width: 100%;
+  min-height: 100px;
+  padding-top: 4vw;
+  padding-bottom: 2vw;
+}
+
+.product .p-1 .main .title h1 {
+  margin: 0;
+  font-weight: 900;
+  letter-spacing: 10px;
+  font-size: 42px;
+  display: inline-block;
+}
+
+.product .p-1 .main .title .tags {
+  margin: 25px 0;
+  border: black solid 2px;
+  width: 400px;
+  height: 40px;
+  position: relative;
+}
+
+@media screen and (max-width: 900px) {
+  .product .p-1 .main .title .tags {
+    width: 80vw;
+  }
+}
+
+.product .p-1 .main .title .tags .move {
+  width: 25%;
+  background-color: black;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  -webkit-transition: .25s !important;
+  transition: .25s !important;
+}
+
+.product .p-1 .main .title .tags .move.p0 {
+  left: 0%;
+}
+
+.product .p-1 .main .title .tags .move.p25 {
+  left: 25%;
+}
+
+.product .p-1 .main .title .tags .move.p50 {
+  left: 50%;
+}
+
+.product .p-1 .main .title .tags .move.p75 {
+  left: 75%;
+}
+
+.product .p-1 .main .title .tags .tag {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 25%;
+  height: 100%;
+  text-align: center;
+  -webkit-transition: .4s;
+  transition: .4s;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.product .p-1 .main .title .tags .tag.io {
+  color: white;
+}
+
+.product .p-1 .main .title .tags .tag.ioh {
+  color: black;
+}
+
+.product .p-1 .main .title .tags .tag:hover, .product .p-1 .main .title .tags .tag.ioh:hover {
+  color: white;
+}
+
+.product .p-1 .main .title .tags .tag:nth-child(1) {
+  width: 25%;
+  left: 0;
+}
+
+.product .p-1 .main .title .tags .tag:nth-child(1):hover ~ .move {
+  left: 0%;
+}
+
+.product .p-1 .main .title .tags .tag:nth-child(2) {
+  width: 25%;
+  left: 25%;
+}
+
+.product .p-1 .main .title .tags .tag:nth-child(2):hover ~ .move {
+  left: 25%;
+}
+
+.product .p-1 .main .title .tags .tag:nth-child(3) {
+  width: 25%;
+  left: 50%;
+}
+
+.product .p-1 .main .title .tags .tag:nth-child(3):hover ~ .move {
+  left: 50%;
+}
+
+.product .p-1 .main .title .tags .tag:nth-child(4) {
+  width: 25%;
+  left: 75%;
+}
+
+.product .p-1 .main .title .tags .tag:nth-child(4):hover ~ .move {
+  left: 75%;
+}
+
+.product .p-1 .main .items {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media screen and (max-width: 900px) {
+  .product .p-1 .main .items {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.product .p-1 .main .items .item {
+  border-radius: 3%;
+  margin: 1%;
+  background-color: black;
+  -webkit-box-shadow: rgba(0, 0, 0, 0) 0px 0px 20px;
+          box-shadow: rgba(0, 0, 0, 0) 0px 0px 20px;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: .25s;
+  transition: .25s;
+}
+
+@media screen and (min-width: 1401px) {
+  .product .p-1 .main .items .item {
+    width: 18%;
+    height: 320px;
+  }
+}
+
+@media screen and (max-width: 1400px) and (min-width: 901px) {
+  .product .p-1 .main .items .item {
+    width: 30%;
+    height: 320px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .product .p-1 .main .items .item {
+    width: 70%;
+    min-width: 300px;
+    height: 400px;
+    margin: 20px 0;
+  }
+}
+
+.product .p-1 .main .items .item .bg {
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-transition: .5s .06s;
+  transition: .5s .06s;
+  -webkit-filter: blur(0px);
+          filter: blur(0px);
+}
+
+.product .p-1 .main .items .item .bg .filter {
+  -webkit-transition: .2s;
+  transition: .2s;
+  position: absolute;
+  bottom: 0;
+  height: 50%;
+  width: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(black), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.product .p-1 .main .items .item .info .title {
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  right: 10%;
+  bottom: 10%;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: white;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+@media screen and (max-width: 1400px) and (min-width: 901px) {
+  .product .p-1 .main .items .item .info .title {
+    font-size: 18px;
+  }
+}
+
+.product .p-1 .main .items .item .info .sub {
+  background-color: rgba(255, 255, 255, 0.493);
+  position: absolute;
+  height: 45%;
+  width: 100%;
+  bottom: -50%;
+  -webkit-transition: .4s;
+  transition: .4s;
+  padding-top: 20%;
+  padding-left: 10%;
+  padding-right: 20%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.product .p-1 .main .items .item .info .btn {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  color: white;
+  -webkit-text-decoration: transparent;
+          text-decoration: transparent;
+  text-align: center;
+  padding: 3% 5px;
+  background-color: black;
+  opacity: .0;
+  top: 40%;
+  left: 25%;
+  right: 25%;
+  margin: 0 auto;
+  -webkit-transition: .3s;
+  transition: .3s;
+  font-size: 15px;
+}
+
+.product .p-1 .main .items .item .info .btn:hover {
+  background-color: white;
+  color: black;
+}
+
+.product .p-1 .main .items .item:hover {
+  border-radius: 2%;
+  -webkit-box-shadow: #3f3f3f 0px 0px 20px;
+          box-shadow: #3f3f3f 0px 0px 20px;
+}
+
+.product .p-1 .main .items .item:hover .bg {
+  width: 140%;
+  height: 140%;
+  left: -20%;
+  top: -20%;
+}
+
+.product .p-1 .main .items .item:hover .bg .filter {
+  bottom: 30%;
+  -webkit-transition: .5s .2s;
+  transition: .5s .2s;
+}
+
+.product .p-1 .main .items .item:hover .title {
+  color: black;
+  bottom: 28%;
+}
+
+@media screen and (max-width: 1400px) and (min-width: 901px) {
+  .product .p-1 .main .items .item:hover .title {
+    bottom: 28.5%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .product .p-1 .main .items .item:hover .title {
+    bottom: 30%;
+  }
+}
+
+.product .p-1 .main .items .item:hover .sub {
+  bottom: 0%;
+  background-color: white;
+}
+
+.product .p-1 .main .items .item:hover .btn {
+  top: 25%;
+  opacity: 1;
+}
+
+.product .p-1 .main .items .item:nth-child(1) .title::after {
+  content: "切片橘麥";
+}
+
+.product .p-1 .main .items .item:nth-child(1) .sub::after {
+  content: "新鮮現切的焗烤局賣，使用來自阿爾卑斯山下小鎮的麥香。";
+}
+
+.product .p-1 .main .items .item:nth-child(1) .bg {
+  background-image: url("../images/item_0000_切片橘麥.jpg");
+}
+
+.product .p-1 .main .items .item:nth-child(2) .title::after {
+  content: "麥香小麥";
+}
+
+.product .p-1 .main .items .item:nth-child(2) .sub::after {
+  content: "香濃麥香，飄揚整個小巷，所有人都愛。";
+}
+
+.product .p-1 .main .items .item:nth-child(2) .bg {
+  background-image: url("../images/item_0001_麥香小麥.jpg");
+}
+
+.product .p-1 .main .items .item:nth-child(3) .title::after {
+  content: "輕鬆硬法";
+}
+
+.product .p-1 .main .items .item:nth-child(3) .sub::after {
+  content: "看似輕鬆，但實際上咬起來卻很硬。";
+}
+
+.product .p-1 .main .items .item:nth-child(3) .bg {
+  background-image: url("../images/item_0002_輕鬆硬法.jpg");
+}
+
+.product .p-1 .main .items .item:nth-child(4) .title::after {
+  content: "忘記橘派";
+}
+
+.product .p-1 .main .items .item:nth-child(4) .sub::after {
+  content: "就像是你昨晚喝得爛醉的派對，什麼都忘了。";
+}
+
+.product .p-1 .main .items .item:nth-child(4) .bg {
+  background-image: url("../images/item_0003_忘記橘派.jpg");
+}
+
+.product .p-1 .main .items .item:nth-child(5) .title::after {
+  content: "來香可頌";
+}
+
+.product .p-1 .main .items .item:nth-child(5) .sub::after {
+  content: "一首會招來運氣的歌頌聲，悅耳動聽又好吃。";
+}
+
+.product .p-1 .main .items .item:nth-child(5) .bg {
+  background-image: url("../images/item_0004_來香可頌.jpg");
+}
+
+.product .p-1 .main .items .item:nth-child(6) .title::after {
+  content: "堆疊法式";
+}
+
+.product .p-1 .main .items .item:nth-child(6) .sub::after {
+  content: "來自法國的頂級廚師所設計給平民的高級美食。";
+}
+
+.product .p-1 .main .items .item:nth-child(6) .bg {
+  background-image: url("../images/item_0005_堆疊法式.jpg");
+}
+
+.product .p-1 .main .items .item:nth-child(7) .title::after {
+  content: "法國麵包";
+}
+
+.product .p-1 .main .items .item:nth-child(7) .sub::after {
+  content: "來自法國巴黎小巷的不知名師父所發明。";
+}
+
+.product .p-1 .main .items .item:nth-child(7) .bg {
+  background-image: url("../images/item_0006_法國麵包.jpg");
+}
+
+.product .p-1 .main .items .item:nth-child(8) .title::after {
+  content: "鞠麥切片";
+}
+
+.product .p-1 .main .items .item:nth-child(8) .sub::after {
+  content: "單純、切片。簡單。";
+}
+
+.product .p-1 .main .items .item:nth-child(8) .bg {
+  background-image: url("../images/item_0007_鞠麥切片.jpg");
+}
+
+.product .p-1 .main .items .item:nth-child(9) .title::after {
+  content: "起司包";
+}
+
+.product .p-1 .main .items .item:nth-child(9) .sub::after {
+  content: "爆漿起司，從裡到外都是起司的牽絲。";
+}
+
+.product .p-1 .main .items .item:nth-child(9) .bg {
+  background-image: url("../images/item_0008_起司包.jpg");
+}
+
+.product .cart {
+  -webkit-transition: .3s .2s;
+  transition: .3s .2s;
+  height: 100%;
+  width: 100%;
+  z-index: 1000000;
+  top: 0;
+  right: 0;
+  position: fixed;
+}
+
+.product .cart .main {
+  -webkit-transition: .8s;
+  transition: .8s;
+  width: 80%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  background-color: #fff;
+}
+
+@media screen and (max-width: 1400px) and (min-width: 901px) {
+  .product .cart .main {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .product .cart .main {
+    width: 100%;
+  }
+}
+
+.product .cart .main .title {
+  -webkit-transition: 1.05s;
+  transition: 1.05s;
+  background-color: brown;
+  background-image: url("../images/cart.png");
+  background-position: center;
+  background-size: cover;
+  height: 25%;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-left: 4%;
+  padding-bottom: 3%;
+}
+
+.product .cart .main .title h1,
+.product .cart .main .title p {
+  margin: 0;
+}
+
+.product .cart .main .list {
+  -webkit-transition: .9s .25s;
+  transition: .9s .25s;
+  padding: 2% 8%;
+  width: 50%;
+}
+
+@media screen and (max-width: 900px) {
+  .product .cart .main .list {
+    width: 80%;
+  }
+}
+
+.product .cart .main .list .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.product .cart .main .list .item .price {
+  margin-left: auto;
+}
+
+.product .cart .main .buy {
+  opacity: 1;
+  -webkit-transition: 1s;
+  transition: 1s;
+  padding: 20px 0;
+  padding-left: 8%;
+}
+
+.product .cart .main .buy a {
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  padding: 10px 20px;
+  display: inline-block;
+}
+
+.product .cart .main .buy a:nth-child(2) {
+  margin-left: 20px;
+}
+
+.product .cart .bg {
+  -webkit-transition: 1s .4s;
+  transition: 1s .4s;
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.product .cart .icon {
+  opacity: 1;
+  -webkit-transition: .8s;
+  transition: .8s;
+  position: absolute;
+  top: 2%;
+  left: 5%;
+}
+
+@media screen and (max-width: 1400px) and (min-width: 901px) {
+  .product .cart .icon {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1401px) {
+  .product .cart .icon {
+    display: none;
+  }
+}
+
+.product .cart.close {
+  right: -100vw;
+  opacity: .0;
+  -webkit-transition: 2s;
+  transition: 2s;
+  background-color: transparent;
+}
+
+.product .cart.close .main {
+  right: -100%;
+}
+
+.product .cart.close .main .title {
+  padding-left: 50%;
+  color: transparent;
+}
+
+.product .cart.close .main .list {
+  padding-left: 50%;
+}
+
+.product .cart.close .main .buy {
+  opacity: 0;
+}
+
+.product .cart.close .bg {
+  -webkit-backdrop-filter: blur(0px);
+          backdrop-filter: blur(0px);
+  -webkit-transition: .1s;
+  transition: .1s;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.product .cart.close .icon {
+  -webkit-transition: .25s;
+  transition: .25s;
+  left: 50%;
+  opacity: 0;
+}
+
+.product .cart-icon {
+  background-color: black;
+  position: fixed;
+  bottom: 5vh;
+  right: 2vw;
+  height: 60px;
+  width: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.521) 0px 0px 20px;
+          box-shadow: rgba(0, 0, 0, 0.521) 0px 0px 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100%;
+  padding-top: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: .25s;
+  transition: .25s;
+  cursor: pointer;
+}
+
+.product .cart-icon:hover {
+  opacity: .8;
+  -webkit-box-shadow: rgba(0, 0, 0, 0) 0px 0px 20px;
+          box-shadow: rgba(0, 0, 0, 0) 0px 0px 20px;
+}
+
+.product .cart-icon:hover .name {
+  left: -48px;
+  opacity: 1;
+}
+
+.product .cart-icon svg {
+  position: absolute;
+  bottom: 13px;
+  width: 30px;
+  height: 30px;
+}
+
+.product .cart-icon .name {
+  -webkit-transition: .15s;
+  transition: .15s;
+  opacity: 0;
+  background-color: white;
+  border: black 2px solid;
+  color: black;
+  border-radius: 20px;
+  padding: 2px 10px;
+  font-size: 12px;
+  position: absolute;
+  bottom: 4px;
+  left: -40px;
+}
+
+@media screen and (max-width: 900px) {
+  .product .cart-icon .name {
+    display: none;
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  height: 2000vh;
   font-family: 'Noto Sans TC', sans-serif;
 }
 
@@ -468,7 +1135,7 @@ body {
 .index .block.b-1 {
   padding: 80px 0;
   min-height: 500px;
-  background-color: #96916657;
+  background-color: #fffaee4d;
 }
 
 .index .block.b-1 .title {
@@ -936,9 +1603,9 @@ body {
   content: '';
   display: block;
   bottom: -1vw;
-  width: 80%;
+  width: 50%;
   position: absolute;
-  border-bottom: #96916657 solid 3px;
+  border-bottom: #fffaee4d solid 2px;
 }
 
 @media screen and (max-width: 900px) {
@@ -956,7 +1623,7 @@ body {
   padding-bottom: 8px;
   border-bottom: transparent 2px solid;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 600;
   letter-spacing: 5px;
   margin: 0 30px;
@@ -1045,8 +1712,8 @@ body {
 }
 
 .index .block.b-3 .info .main .sub h1 {
-  font-size: 40px;
-  letter-spacing: 8px;
+  font-size: 30px;
+  letter-spacing: 6px;
   font-weight: 900;
 }
 
@@ -1061,7 +1728,7 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 500;
   letter-spacing: 1.5px;
   line-height: 2vw;
@@ -1072,14 +1739,14 @@ body {
 @media screen and (max-width: 1400px) and (min-width: 901px) {
   .index .block.b-3 .info .main .cont {
     line-height: 3vw;
-    font-size: 1.5vw;
+    font-size: 14px;
   }
 }
 
 @media screen and (max-width: 900px) {
   .index .block.b-3 .info .main .cont {
     line-height: 3.5vh;
-    font-size: 1.5vh;
+    font-size: 1.9vh;
   }
 }
 
@@ -1089,8 +1756,8 @@ body {
 }
 
 .index .block.b-3 .info .main .cont h1 {
-  font-size: 30px;
-  letter-spacing: 20px;
+  font-size: 22px;
+  letter-spacing: 10px;
   -webkit-transition: 1s;
   transition: 1s;
 }
@@ -1138,58 +1805,149 @@ body {
 }
 
 .index .block.b-4 {
+  height: auto;
   width: 100%;
-  height: 85vh;
-  min-height: 720px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  overflow: hidden;
-  position: relative;
 }
 
-.index .block.b-4 .bg {
+.index .block.b-4 .top {
+  padding: 5%;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 20px;
+          box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 20px;
+}
+
+.index .block.b-4 .top h1 {
+  font-weight: 900;
+}
+
+.index .block.b-4 .blocks {
+  position: relative;
+  height: 50vh;
+  min-height: 480px;
   width: 100%;
+}
+
+@media screen and (max-width: 900px) {
+  .index .block.b-4 .blocks {
+    height: 120vh;
+  }
+  .index .block.b-4 .blocks .info {
+    text-align: left;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 40% !important;
+  }
+  .index .block.b-4 .blocks .img {
+    top: 0 !important;
+    width: 100% !important;
+    height: 60% !important;
+  }
+}
+
+.index .block.b-4 .blocks.right .info {
+  right: 0;
+}
+
+.index .block.b-4 .blocks.right .img {
+  left: 0;
+}
+
+.index .block.b-4 .blocks.left {
+  text-align: right;
+}
+
+.index .block.b-4 .blocks.left .info {
+  left: 0;
+}
+
+.index .block.b-4 .blocks.left .img {
+  right: 0;
+}
+
+.index .block.b-4 .blocks .img {
+  position: absolute;
   height: 100%;
+  width: 50%;
+  background-position: center;
   background-size: cover;
-  background-position: top;
-  background-image: url("../images/index_header.jpg");
   background-attachment: fixed;
 }
 
-.index .block.b-4 .bg .filter {
-  position: absolute;
-  bottom: 0;
+.index .block.b-4 .blocks .img .filter {
   width: 100%;
-  height: 50%;
-  background: -webkit-gradient(linear, left bottom, left top, from(#96916657), to(rgba(0, 0, 0, 0)));
-  background: linear-gradient(0deg, #96916657 0%, rgba(0, 0, 0, 0) 100%);
+  height: 100%;
+  -webkit-transition: .5s;
+  transition: .5s;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
-.index .block.b-4 .intor {
-  top: 0;
-  bottom: 0;
-  right: 20%;
-  left: 0;
-  margin: auto;
+.index .block.b-4 .blocks .img .filter:hover {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.index .block.b-4 .blocks .info {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50%;
+  height: 100%;
   position: absolute;
-  height: 50%;
-  width: 70%;
+}
+
+.index .block.b-4 .blocks .info h1 {
+  margin: 20px 0;
+}
+
+.index .block.b-4 .blocks .info p {
+  margin: 10px 0;
+}
+
+.index .block.b-4 .blocks .links {
+  margin: 60px 0;
+}
+
+.index .block.b-4 .blocks .links a {
   color: white;
+  background-color: black;
+  border: transparent 2px solid;
+  text-decoration: none;
+  padding: 8px 20px;
+  margin-left: 20px;
+  -webkit-transition: .4s;
+  transition: .4s;
+  letter-spacing: 2px;
+  font-weight: 500;
 }
 
-.index .block.b-4 .intor h1 {
-  font-weight: 600;
-  margin: 0;
-  font-size: 3vw;
-  letter-spacing: 1vw;
+.index .block.b-4 .blocks .links a:hover {
+  border: black 2px solid;
+  background-color: transparent;
+  color: black;
 }
 
-.index .block.b-4 .intor h1 span {
-  font-size: 6vw;
+.index .block.b-4 .blocks .links a:first-child {
+  margin-left: 0 !important;
 }
 
-.index .block.b-4 .intor p {
-  font-size: 30px;
+.index .block.b-4 .blocks:nth-child(2) .img {
+  background-image: url("../images/patrick-fore-NnTQBkBkU9g-unsplash.jpg");
+}
+
+.index .block.b-4 .blocks:nth-child(3) .img {
+  background-image: url("../images/stephanie-leblanc-NZH0p2_2kMo-unsplash.jpg");
+}
+
+.index .block.b-4 .blocks:nth-child(4) .img {
+  background-image: url("../images/artur-rutkowski-h2CPeqTzaaY-unsplash.jpg");
 }
 
 .load {
@@ -1254,467 +2012,156 @@ body {
   transition: .5s;
 }
 
-.product {
+.support.header {
   width: 100%;
-  overflow: hidden;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.product .p-1 {
-  background-color: #96916657;
-  width: 100%;
-  min-height: 50vh;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 0 5vw;
-}
-
-.product .p-1 .main {
-  width: 100%;
-  min-height: 100px;
-  padding-top: 4vw;
-  padding-bottom: 2vw;
-}
-
-.product .p-1 .main .title h1 {
-  margin: 0;
-  font-weight: 900;
-  letter-spacing: 10px;
-  font-size: 42px;
-  display: inline-block;
-}
-
-.product .p-1 .main .title .tags {
-  margin: 25px 0;
-  border: black solid 2px;
-  width: 400px;
-  height: 40px;
+  height: 50vh;
   position: relative;
 }
 
-.product .p-1 .main .title .tags .move {
-  width: 25%;
-  background-color: black;
+.support.header .bg {
+  position: relative;
+  width: 100%;
   height: 100%;
-  left: 0;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url("../images/olenka-kotyk-iRguZkRTQyA-unsplash.jpg");
+}
+
+.support.header .bg::before {
   position: absolute;
-  -webkit-transition: .25s !important;
-  transition: .25s !important;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-.product .p-1 .main .title .tags .move.p0 {
-  left: 0%;
-}
-
-.product .p-1 .main .title .tags .move.p25 {
-  left: 25%;
-}
-
-.product .p-1 .main .title .tags .move.p50 {
-  left: 50%;
-}
-
-.product .p-1 .main .title .tags .move.p75 {
-  left: 75%;
-}
-
-.product .p-1 .main .title .tags .tag {
+.support.header .title {
+  padding: 0 10vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   position: absolute;
+  top: 0;
+  bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 25%;
-  height: 100%;
-  text-align: center;
-  -webkit-transition: .4s;
-  transition: .4s;
-  z-index: 1;
-  cursor: pointer;
-}
-
-.product .p-1 .main .title .tags .tag.io {
-  color: white;
-}
-
-.product .p-1 .main .title .tags .tag.ioh {
-  color: black;
-}
-
-.product .p-1 .main .title .tags .tag:hover, .product .p-1 .main .title .tags .tag.ioh:hover {
-  color: white;
-}
-
-.product .p-1 .main .title .tags .tag:nth-child(1) {
-  width: 25%;
-  left: 0;
-}
-
-.product .p-1 .main .title .tags .tag:nth-child(1):hover ~ .move {
-  left: 0%;
-}
-
-.product .p-1 .main .title .tags .tag:nth-child(2) {
-  width: 25%;
-  left: 25%;
-}
-
-.product .p-1 .main .title .tags .tag:nth-child(2):hover ~ .move {
-  left: 25%;
-}
-
-.product .p-1 .main .title .tags .tag:nth-child(3) {
-  width: 25%;
-  left: 50%;
-}
-
-.product .p-1 .main .title .tags .tag:nth-child(3):hover ~ .move {
-  left: 50%;
-}
-
-.product .p-1 .main .title .tags .tag:nth-child(4) {
-  width: 25%;
-  left: 75%;
-}
-
-.product .p-1 .main .title .tags .tag:nth-child(4):hover ~ .move {
-  left: 75%;
-}
-
-.product .p-1 .main .items {
   width: 100%;
-  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.support.header .title h1 {
+  font-weight: 900;
+  letter-spacing: 5px;
+  font-size: 50px;
+}
+
+.support > h1 {
+  width: 100%;
+  text-align: center;
+  margin: 8vh 0;
+}
+
+.support .drop {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 20vw;
+}
+
+.support .drop .item {
+  margin: 20px 0;
+}
+
+.support .drop .item.dr-open .concent {
+  height: auto;
+  padding: 20px 20px;
+}
+
+.support .drop .item.dr-close .concent {
+  height: 0;
+}
+
+.support .drop .item .title {
+  cursor: pointer;
+  border-radius: 8px 8px 0 0;
+  background-color: #221e17;
+  padding: 10px 20px;
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.support .drop .item .concent {
+  -webkit-transition: .2s;
+  transition: .2s;
+  height: 0;
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
+  background-color: white;
+  border-left: black solid 1px;
+  border-right: black solid 1px;
+  border-bottom: black solid 1px;
+}
+
+.footer {
+  height: 50vh;
+  min-height: 500px;
+  width: 100%;
+  background-color: #221e17;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.product .p-1 .main .items .item {
-  border-radius: 3%;
-  margin: 1%;
-  background-color: black;
-  -webkit-box-shadow: rgba(0, 0, 0, 0) 0px 0px 20px;
-          box-shadow: rgba(0, 0, 0, 0) 0px 0px 20px;
-  position: relative;
   overflow: hidden;
-  -webkit-transition: .25s;
-  transition: .25s;
-}
-
-@media screen and (min-width: 1401px) {
-  .product .p-1 .main .items .item {
-    width: 18%;
-    height: 320px;
-  }
-}
-
-@media screen and (max-width: 1400px) and (min-width: 901px) {
-  .product .p-1 .main .items .item {
-    width: 30%;
-    height: 320px;
-  }
-}
-
-.product .p-1 .main .items .item .bg {
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  -webkit-transition: .5s .06s;
-  transition: .5s .06s;
-  -webkit-filter: blur(0px);
-          filter: blur(0px);
-}
-
-.product .p-1 .main .items .item .bg .filter {
-  -webkit-transition: .2s;
-  transition: .2s;
-  position: absolute;
-  bottom: 0;
-  height: 50%;
-  width: 100%;
-  background: -webkit-gradient(linear, left bottom, left top, from(black), to(rgba(0, 0, 0, 0)));
-  background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0) 100%);
-}
-
-.product .p-1 .main .items .item .info .title {
-  position: absolute;
-  width: 80%;
-  left: 10%;
-  right: 10%;
-  bottom: 10%;
-  font-size: 22px;
-  font-weight: 700;
-  letter-spacing: 2px;
   color: white;
-  -webkit-transition: .5s;
-  transition: .5s;
-}
-
-@media screen and (max-width: 1400px) and (min-width: 901px) {
-  .product .p-1 .main .items .item .info .title {
-    font-size: 18px;
-  }
-}
-
-.product .p-1 .main .items .item .info .sub {
-  background-color: rgba(255, 255, 255, 0.493);
-  position: absolute;
-  height: 45%;
-  width: 100%;
-  bottom: -50%;
-  -webkit-transition: .4s;
-  transition: .4s;
-  padding-top: 20%;
-  padding-left: 10%;
-  padding-right: 20%;
+  text-transform: uppercase;
+  padding: 0 2vw;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-.product .p-1 .main .items .item .info .btn {
-  cursor: pointer;
-  position: absolute;
-  display: block;
-  color: white;
-  -webkit-text-decoration: transparent;
-          text-decoration: transparent;
-  text-align: center;
-  padding: 3% 5px;
-  background-color: black;
-  opacity: .0;
-  top: 40%;
-  left: 25%;
-  right: 25%;
-  margin: 0 auto;
-  -webkit-transition: .3s;
-  transition: .3s;
-  font-size: 15px;
-}
-
-.product .p-1 .main .items .item .info .btn:hover {
-  background-color: white;
-  color: black;
-}
-
-.product .p-1 .main .items .item:hover {
-  border-radius: 2%;
-  -webkit-box-shadow: #3f3f3f 0px 0px 20px;
-          box-shadow: #3f3f3f 0px 0px 20px;
-}
-
-.product .p-1 .main .items .item:hover .bg {
-  width: 140%;
-  height: 140%;
-  left: -20%;
-  top: -20%;
-}
-
-.product .p-1 .main .items .item:hover .bg .filter {
-  bottom: 30%;
-  -webkit-transition: .5s .2s;
-  transition: .5s .2s;
-}
-
-.product .p-1 .main .items .item:hover .title {
-  color: black;
-  bottom: 28%;
-}
-
-@media screen and (max-width: 1400px) and (min-width: 901px) {
-  .product .p-1 .main .items .item:hover .title {
-    bottom: 28.5%;
-  }
-}
-
-.product .p-1 .main .items .item:hover .sub {
-  bottom: 0%;
-  background-color: white;
-}
-
-.product .p-1 .main .items .item:hover .btn {
-  top: 25%;
-  opacity: 1;
-}
-
-.product .p-1 .main .items .item:nth-child(1) .title::after {
-  content: "切片橘麥";
-}
-
-.product .p-1 .main .items .item:nth-child(1) .sub::after {
-  content: "新鮮現切的焗烤局賣，使用來自阿爾卑斯山下小鎮的麥香。";
-}
-
-.product .p-1 .main .items .item:nth-child(1) .bg {
-  background-image: url("../images/item_0000_切片橘麥.jpg");
-}
-
-.product .p-1 .main .items .item:nth-child(2) .title::after {
-  content: "麥香小麥";
-}
-
-.product .p-1 .main .items .item:nth-child(2) .sub::after {
-  content: "香濃麥香，飄揚整個小巷，所有人都愛。";
-}
-
-.product .p-1 .main .items .item:nth-child(2) .bg {
-  background-image: url("../images/item_0001_麥香小麥.jpg");
-}
-
-.product .p-1 .main .items .item:nth-child(3) .title::after {
-  content: "輕鬆硬法";
-}
-
-.product .p-1 .main .items .item:nth-child(3) .sub::after {
-  content: "看似輕鬆，但實際上咬起來卻很硬。";
-}
-
-.product .p-1 .main .items .item:nth-child(3) .bg {
-  background-image: url("../images/item_0002_輕鬆硬法.jpg");
-}
-
-.product .p-1 .main .items .item:nth-child(4) .title::after {
-  content: "忘記橘派";
-}
-
-.product .p-1 .main .items .item:nth-child(4) .sub::after {
-  content: "就像是你昨晚喝得爛醉的派對，什麼都忘了。";
-}
-
-.product .p-1 .main .items .item:nth-child(4) .bg {
-  background-image: url("../images/item_0003_忘記橘派.jpg");
-}
-
-.product .p-1 .main .items .item:nth-child(5) .title::after {
-  content: "來香可頌";
-}
-
-.product .p-1 .main .items .item:nth-child(5) .sub::after {
-  content: "一首會招來運氣的歌頌聲，悅耳動聽又好吃。";
-}
-
-.product .p-1 .main .items .item:nth-child(5) .bg {
-  background-image: url("../images/item_0004_來香可頌.jpg");
-}
-
-.product .p-1 .main .items .item:nth-child(6) .title::after {
-  content: "堆疊法式";
-}
-
-.product .p-1 .main .items .item:nth-child(6) .sub::after {
-  content: "來自法國的頂級廚師所設計給平民的高級美食。";
-}
-
-.product .p-1 .main .items .item:nth-child(6) .bg {
-  background-image: url("../images/item_0005_堆疊法式.jpg");
-}
-
-.product .p-1 .main .items .item:nth-child(7) .title::after {
-  content: "法國麵包";
-}
-
-.product .p-1 .main .items .item:nth-child(7) .sub::after {
-  content: "來自法國巴黎小巷的不知名師父所發明。";
-}
-
-.product .p-1 .main .items .item:nth-child(7) .bg {
-  background-image: url("../images/item_0006_法國麵包.jpg");
-}
-
-.product .p-1 .main .items .item:nth-child(8) .title::after {
-  content: "鞠麥切片";
-}
-
-.product .p-1 .main .items .item:nth-child(8) .sub::after {
-  content: "單純、切片。簡單。";
-}
-
-.product .p-1 .main .items .item:nth-child(8) .bg {
-  background-image: url("../images/item_0007_鞠麥切片.jpg");
-}
-
-.product .p-1 .main .items .item:nth-child(9) .title::after {
-  content: "起司包";
-}
-
-.product .p-1 .main .items .item:nth-child(9) .sub::after {
-  content: "爆漿起司，從裡到外都是起司的牽絲。";
-}
-
-.product .p-1 .main .items .item:nth-child(9) .bg {
-  background-image: url("../images/item_0008_起司包.jpg");
-}
-
-.product .cart {
-  -webkit-transition: .3s .2s;
-  transition: .3s .2s;
-  height: 100%;
-  width: 100%;
-  z-index: 1000000;
-  top: 0;
-  right: 0;
-  position: fixed;
-}
-
-.product .cart .main {
-  -webkit-transition: .8s;
-  transition: .8s;
-  width: 80%;
-  height: 100%;
-  position: absolute;
-  right: 0;
-  background-color: #fff;
-}
-
-@media screen and (max-width: 1400px) and (min-width: 901px) {
-  .product .cart .main {
-    width: 90%;
-  }
-}
-
 @media screen and (max-width: 900px) {
-  .product .cart .main {
-    width: 100%;
+  .footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    height: auto;
   }
 }
 
-.product .cart .bg {
-  -webkit-transition: 1s .4s;
-  transition: 1s .4s;
-  background-color: rgba(0, 0, 0, 0.7);
-  height: 100%;
+.footer .logo {
+  padding: 5% 3%;
   width: 100%;
-  position: absolute;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
 }
 
-.product .cart.close {
-  right: -100vw;
-  opacity: .0;
-  -webkit-transition: 2s;
-  transition: 2s;
-  background-color: transparent;
+.footer .logo img {
+  width: 50%;
+  height: auto;
+  cursor: pointer;
 }
 
-.product .cart.close .main {
-  right: -100%;
+.footer .list {
+  width: 100%;
+  padding: 3%;
 }
 
-.product .cart.close .bg {
-  -webkit-transition: .1s;
-  transition: .1s;
-  background-color: rgba(0, 0, 0, 0);
+.footer .list p {
+  cursor: pointer;
+}
+
+.footer .list p a {
+  color: white;
+  text-decoration: none;
 }
 /*# sourceMappingURL=main.css.map */

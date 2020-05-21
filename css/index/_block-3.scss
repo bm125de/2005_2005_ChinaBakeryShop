@@ -93,9 +93,9 @@ $b-3_images-03: url("../images/into-3.jpg");
                         content: '';
                         display: block;
                         bottom: -1vw;
-                        width: 80%;
+                        width: 50%;
                         position: absolute;
-                        border-bottom: $theme-color-05 solid 3px;
+                        border-bottom: $theme-color-05 solid 2px;
                     }
                     @include media_mobile {
                         border-bottom: none;
@@ -173,7 +173,7 @@ $b-3_images-03: url("../images/into-3.jpg");
                         padding-bottom: 8px;
                         border-bottom: transparent 2px solid;
                         cursor: pointer;
-                        font-size: 18px;
+                        font-size: 14px;
                         font-weight: 600;
                         letter-spacing: 5px;
                         margin: 0 30px;
@@ -183,8 +183,8 @@ $b-3_images-03: url("../images/into-3.jpg");
                 .sub {
                     margin-bottom: 50px;
                     h1 {
-                        font-size: 40px;
-                        letter-spacing: 8px;
+                        font-size: 30px;
+                        letter-spacing: 6px;
                         font-weight: 900;
                     }
                     p {
@@ -200,7 +200,7 @@ $b-3_images-03: url("../images/into-3.jpg");
                     // padding: 20px 50px;
                     width: 100%;
                     // background-color: #96916657;
-                    font-size: 18px;
+                    font-size: 15px;
                     font-weight: 500;
                     letter-spacing: 1.5px;
                     line-height: 2vw;
@@ -208,18 +208,18 @@ $b-3_images-03: url("../images/into-3.jpg");
                     padding: 40px 0;
                     @include media_pad {
                         line-height: 3vw;
-                        font-size: 1.5vw;
+                        font-size: 14px;
                     }
                     @include media_mobile {
                         line-height: 3.5vh;
-                        font-size: 1.5vh;
+                        font-size: 1.9vh;
                     }
                     * {
                         transition: .2s;
                     }
                     h1 {
-                        font-size: 30px;
-                        letter-spacing: 20px;
+                        font-size: 22px;
+                        letter-spacing: 10px;
                         transition: 1s;
                     }
                     .ar {
